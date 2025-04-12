@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CollectionsMasterConsoleUI
 {
@@ -36,6 +37,9 @@ namespace CollectionsMasterConsoleUI
             */
 
             Console.WriteLine("All Numbers Reversed:");
+            
+            Array.Reverse(array);
+            NumberPrinter(array);
 
             Console.WriteLine("---------REVERSE CUSTOM------------");
 
