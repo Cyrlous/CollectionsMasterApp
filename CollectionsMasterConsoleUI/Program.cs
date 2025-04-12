@@ -16,11 +16,13 @@ namespace CollectionsMasterConsoleUI
             var array = new int[50];
 
             //TODO: Create a method to populate the number array with 50 random numbers that are between 0 and 50
-            
+            Populater(array);
 
             //TODO: Print the first number of the array
+            Console.WriteLine(array[0]);
 
-            //TODO: Print the last number of the array            
+            //TODO: Print the last number of the array  
+            Console.WriteLine(array[49]);
 
             Console.WriteLine("All Numbers Original");
             //UNCOMMENT this method to print out your numbers from arrays or lists
@@ -126,9 +128,9 @@ namespace CollectionsMasterConsoleUI
         private static void Populater(int[] numbers)
         {
             Random rng = new Random();
-            foreach (int number in numbers)
+            for(int i =0; i < numbers.Length; i++)
             {
-                rng.Next(0,51);
+                numbers[i] = rng.Next(0,51);
             }
         }        
 
