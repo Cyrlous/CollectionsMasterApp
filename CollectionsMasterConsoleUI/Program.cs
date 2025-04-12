@@ -42,6 +42,7 @@ namespace CollectionsMasterConsoleUI
             NumberPrinter(array);
 
             Console.WriteLine("---------REVERSE CUSTOM------------");
+            ReverseArray(array);
 
             Console.WriteLine("-------------------");
 
@@ -140,7 +141,10 @@ namespace CollectionsMasterConsoleUI
 
         private static void ReverseArray(int[] array)
         {
-            
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine(array[i]);
+            }
         }
 
         /// <summary>
