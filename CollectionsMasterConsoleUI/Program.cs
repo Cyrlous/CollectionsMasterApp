@@ -118,10 +118,10 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("------------------");
 
             //TODO: Convert the list to an array and store that into a variable
-            
+            var numberArray = numList.ToArray();
 
             //TODO: Clear the list
-            
+            numList.Clear();
 
             #endregion
         }
