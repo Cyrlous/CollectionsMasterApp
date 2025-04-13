@@ -14,20 +14,20 @@ namespace CollectionsMasterConsoleUI
 
             #region Arrays
             //TODO: Create an integer Array of size 50
-            var array = new int[50];
+            var numArray = new int[50];
 
             //TODO: Create a method to populate the number array with 50 random numbers that are between 0 and 50
-            Populater(array);
+            Populater(numArray);
 
             //TODO: Print the first number of the array
-            Console.WriteLine(array[0]);
+            Console.WriteLine(numArray[0]);
 
             //TODO: Print the last number of the array  
-            Console.WriteLine(array[49]);
+            Console.WriteLine(numArray[49]);
 
             Console.WriteLine("All Numbers Original");
             //UNCOMMENT this method to print out your numbers from arrays or lists
-            NumberPrinter(array);
+            NumberPrinter(numArray);
             Console.WriteLine("-------------------");
 
             //TODO: Reverse the contents of the array and then print the array out to the console.
@@ -38,26 +38,28 @@ namespace CollectionsMasterConsoleUI
 
             Console.WriteLine("All Numbers Reversed:");
             
-            Array.Reverse(array);
-            NumberPrinter(array);
+            Array.Reverse(numArray);
+            NumberPrinter(numArray);
 
             Console.WriteLine("---------REVERSE CUSTOM------------");
-            ReverseArray(array);
-            NumberPrinter(array);
+            ReverseArray(numArray);
+            NumberPrinter(numArray);
 
             Console.WriteLine("-------------------");
 
             //TODO: Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
             Console.WriteLine("Multiple of three = 0: ");
             
-            ThreeKiller(array);
+            ThreeKiller(numArray);
+            NumberPrinter(numArray);
 
             Console.WriteLine("-------------------");
 
             //TODO: Sort the array in order now
             /*      Hint: Array.____()      */
             Console.WriteLine("Sorted numbers:");
-            
+            Array.Sort(numArray);
+            NumberPrinter(numArray);
 
             Console.WriteLine("\n************End Arrays*************** \n");
             #endregion
@@ -67,10 +69,10 @@ namespace CollectionsMasterConsoleUI
 
             /*   Set Up   */
             //TODO: Create an integer List
-            
+            var numList = new List<int>();
 
             //TODO: Print the capacity of the list to the console
-            
+            Console.WriteLine(numList.Count());
 
             //TODO: Populate the List with 50 random numbers between 0 and 50 you will need a method for this            
             
@@ -119,7 +121,6 @@ namespace CollectionsMasterConsoleUI
                 {
                     numbers[i] = 0;
                 }
-                Console.WriteLine(numbers[i]);
             }
             }
 
@@ -136,7 +137,7 @@ namespace CollectionsMasterConsoleUI
         private static void Populater(List<int> numberList)
         {
             Random rng = new Random();
-
+            
         }
 
         private static void Populater(int[] numbers)
