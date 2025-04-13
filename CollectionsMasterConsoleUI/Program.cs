@@ -98,12 +98,15 @@ namespace CollectionsMasterConsoleUI
 
             Console.WriteLine("All Numbers:");
             //UNCOMMENT this method to print out your numbers from arrays or lists
-            //NumberPrinter();
+            NumberPrinter(numList);
             Console.WriteLine("-------------------");
 
 
             //TODO: Create a method that will remove all odd numbers from the list then print results
             Console.WriteLine("Evens Only!!");
+            
+            OddKiller(numList);
+            NumberPrinter(numList);
             
             Console.WriteLine("------------------");
 
@@ -134,7 +137,13 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numberList)
         {
-            
+            for (int i = 0; i < numberList.Count; i++)
+            {
+                if (numberList[i] % 2 == 1)
+                {
+                    numberList[i] = 0;
+                }
+            }
         }
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
