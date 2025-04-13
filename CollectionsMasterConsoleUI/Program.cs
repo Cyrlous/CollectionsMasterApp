@@ -43,12 +43,14 @@ namespace CollectionsMasterConsoleUI
 
             Console.WriteLine("---------REVERSE CUSTOM------------");
             ReverseArray(array);
+            NumberPrinter(array);
 
             Console.WriteLine("-------------------");
 
             //TODO: Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
             Console.WriteLine("Multiple of three = 0: ");
             
+            ThreeKiller(array);
 
             Console.WriteLine("-------------------");
 
@@ -111,8 +113,15 @@ namespace CollectionsMasterConsoleUI
 
         private static void ThreeKiller(int[] numbers)
         {
-            
-        }
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 3 == 0)
+                {
+                    numbers[i] = 0;
+                }
+                Console.WriteLine(numbers[i]);
+            }
+            }
 
         private static void OddKiller(List<int> numberList)
         {
@@ -141,9 +150,17 @@ namespace CollectionsMasterConsoleUI
 
         private static void ReverseArray(int[] array)
         {
-            for (int i = array.Length - 1; i >= 0; i--)
+            int first = 0;
+            int last = array.Length - 1;
+            
+            while (first < last)
             {
-                Console.WriteLine(array[i]);
+                int temp = array[first];
+                array[first] = array[last];
+                array[last] = temp;
+                
+                first++;
+                last--;
             }
         }
 
