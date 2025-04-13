@@ -112,6 +112,8 @@ namespace CollectionsMasterConsoleUI
 
             //TODO: Sort the list then print results
             Console.WriteLine("Sorted Evens!!");
+            numList.Sort();
+            NumberPrinter(numList);
             
             Console.WriteLine("------------------");
 
@@ -137,11 +139,11 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numberList)
         {
-            for (int i = 0; i < numberList.Count; i++)
+            for (int i = numberList.Count - 1; i >= 0; i--)
             {
-                if (numberList[i] % 2 == 1)
+                if (numberList[i] % 2 != 0)
                 {
-                    numberList[i] = 0;
+                    numberList.Remove(numberList[i]);
                 }
             }
         }
